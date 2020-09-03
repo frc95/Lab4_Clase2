@@ -1,0 +1,17 @@
+<h1>Cargar Alumno</h1>
+<mat-slider min="1" max="100" step="1" value="1"></mat-slider>
+<br>
+<label for="nombre">Nombre: </label>
+<input type="text" id="nombre" name="nombre">
+<br>
+<label for="apellido">Apellido: </label>
+<input type="text" id="apellido" name="apellido">
+<br>
+<label for="legajo">Legajo: </label>
+<input type="text" id="legajo" name="legajo">
+<br>
+<label for="materia">Materia: </label>
+<input type="text" id="materia" name="materia">
+<br>
+<button (click)="cargar($event)">Cargar Alumno</button>
+<button>Listar Alumnos</button>
