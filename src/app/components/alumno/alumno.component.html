@@ -1,17 +1,12 @@
-<h1>Cargar Alumno</h1>
-<mat-slider min="1" max="100" step="1" value="1"></mat-slider>
-<br>
-<label for="nombre">Nombre: </label>
-<input type="text" id="nombre" name="nombre">
-<br>
-<label for="apellido">Apellido: </label>
-<input type="text" id="apellido" name="apellido">
-<br>
-<label for="legajo">Legajo: </label>
-<input type="text" id="legajo" name="legajo">
-<br>
-<label for="materia">Materia: </label>
-<input type="text" id="materia" name="materia">
-<br>
-<button (click)="cargar($event)">Cargar Alumno</button>
-<button>Listar Alumnos</button>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-item nav-link active" href="#" (click)="nav(1)">Cargar <span class="sr-only">(current)</span></a>
+        <a class="nav-item nav-link active" href="#" (click)="nav(2)">Listado <span class="sr-only">(current)</span></a>
+      </div>
+    </div>
+</nav>
+
+<app-cargar-persona *ngIf="caso==1" (onCargar)="CargarAlumno($event)"></app-cargar-persona>
+<app-listado-personas *ngIf="caso==2" [titulo]="titulo" [listaNombres]="listaNombres"></app-listado-personas>
+

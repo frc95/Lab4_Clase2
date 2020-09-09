@@ -7,14 +7,31 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AlumnoComponent implements OnInit {
 
+  caso : number;
+  titulo : string = "Listado de Alumnos";
+  listaNombres = [];
+
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  cargar(e)
+  nav(caso : number)
   {
-    alert("hola");
+    if(caso==1)
+    {
+      this.caso=1;
+    }
+    if(caso==2)
+    {
+      this.caso=2;
+    }
+  }
+
+  CargarAlumno(e)
+  {
+    console.log("Salida: "+e.nombre);
+    this.listaNombres.push(e);
   }
 
 }
